@@ -1,0 +1,13 @@
+<div ng-controller="XYZ">
+<h2 style="text-align: center;font-family: 'Gravitas One', cursive;font-style: italic;color: red">Try your luck<br>
+    Guess the number</h2>
+<p class="well lead"style="background-color: #3A3A3A;font-style: italic;color: #fef6ff;text-align: center;">Apply your luck, how is ur luck </p>
+<p class="well lead" style="text-align: center;">Your Guess: <input style="margin-top: 10px;height:5%;" type="number" ng-model="guess"/>
+    <button ng-click="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
+    <button ng-click="initializeGame()" class="btn btn-warning btn-sm">Restart</button>
+</p> <p ng-show="deviation<0" class="alert alert-warning">your guess is higher</p>
+<p ng-show="deviation>0"class="alert alert-warning">your guess is lower</p>
+<p ng-show="deviation==0"class="alert alert-success">yes that's it</p>
+<p class="text-info" style="text-align: center;">No of guesses : <span class="badge" >{{noOfTries}}</span></p>
+
+</div>

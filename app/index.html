@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-united.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="mainApp">
+<div class="container">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#/">Fun-Zone</a>
+      <ul class="nav">
+        <li ><a href="#/snake">Snake</a></li>
+        <li ng-class="{active: routeIs('/brick_Storm')}"><a href="#/brick_storm">Brick-Storm</a></li>
+        <li ><a href="#/random_guess">Random-Guess</a></li>
+      </ul>
+
+      <ul class="nav pull-right">
+        <li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+<div ng-view></div>
+</div>
+
+
+
+</body>
+</html>
